@@ -8,7 +8,7 @@ The Cart route will display all the books in the cart and each cart item can be 
 
 ## Data
 
-For now, create a json file named *books.json* inside domain/books and read all the books from there and display it on the page.
+For now, create a json file named *books.ts* inside domain/books and read all the books from it inside the async thunk and display it on the page.
 
 We would add apis in the future.
 
@@ -18,7 +18,7 @@ Everything must be created in typescript. As practicing it will make you more co
 
 ## State management
 
-The client state, in this case, the cart must be a globally accessible state. Try using the **Context API** provided by React or you could also install any library that does the same job.
+We will use **Redux Toolkit** to manage our state in the app.
 
 ## Wireframes
 
