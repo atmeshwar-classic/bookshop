@@ -1,5 +1,14 @@
 # Bookshop App
 
+## How to proceed
+
+Before starting, create a new branch by your name and Employee ID, for eg: **atmeshwar-1053**, and then write your code.
+Make sure to make several small commits with a relateable message.
+
+## Evaluation
+
+When your are done, create a Pull Request onto the main branch.
+
 ## Overview
 
 There are two routes, books and cart. Books will display a list of books as cards and each card will have an **Add** button that would add it the cart.
