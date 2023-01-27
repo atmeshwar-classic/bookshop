@@ -3,7 +3,7 @@
 ## How to proceed
 
 Before starting, create a new branch by your name and Employee ID, for eg: **atmeshwar-1053**, and then write your code.
-Make sure to make several small commits with a relateable message.
+Make sure to make several small commits with a relatable message.
 
 ## Evaluation
 
