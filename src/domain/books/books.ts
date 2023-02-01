@@ -23,13 +23,6 @@ export const books: Book[] = [
     price: 20
   },
   {
-    id: '123',
-    name: 'Book',
-    author: 'Me',
-    description: 'A very good book',
-    price: 20
-  },
-  {
     id: '126',
     name: 'Book',
     author: 'Me',
@@ -42,5 +35,27 @@ export const books: Book[] = [
     author: 'Me',
     description: 'A very good book',
     price: 20
+  },
+  {
+    id: '128',
+    name: 'Book',
+    author: 'Me',
+    description: 'A very good book',
+    price: 20
+  },
+  {
+    id: '129',
+    name: 'Book',
+    author: 'Me',
+    description: 'A very good book',
+    price: 20
+  },
+  {
+    id: '130',
+    name: 'Book',
+    author: 'Me',
+    description: 'A very good book',
+    price: 20
   }
+
 ]
