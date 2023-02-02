@@ -21,7 +21,13 @@
 }
 
 .bookcard-add-button span {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 900;
-  border: 2px solid gold;
+  color: gold;
+  cursor: pointer;
+  transition: ease-in 2s;
+}
+
+.bookcard-add-button span:hover {
+  transform: scale(2);
 }

@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Drawer } from "antd";
 import "./style.css";
 import { CartPage } from "../../domain/cart/CartPage";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const cartdata = useSelector((state: RootState) => state.cart.cart);
 
   const showDrawer = () => {
     setOpen(true);
@@ -16,10 +19,9 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar-container">
-        <div className="left-nav-cont">CI</div>
         <div className="right-nav-cont">
-          <span>Book</span>
           <span onClick={showDrawer}>Cart</span>
+          <p className="cart-items-count">{cartdata.length}</p>
         </div>
       </div>
       <Drawer

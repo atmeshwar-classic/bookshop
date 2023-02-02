@@ -9,7 +9,7 @@ import { Book, BooksState } from './types'
 // 2. is async fucntion
 export const getBooks = createAsyncThunk<Book[]>('books/get', async () => {
   // simulating a delay
-  await delay(2000);
+  await delay(4000);
   return books;
 })
 
@@ -22,7 +22,8 @@ const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    cleanupBooks: () => initialState
+    cleanupBooks: () => initialState,
+   
   },
   extraReducers: (builder) => {
     builder

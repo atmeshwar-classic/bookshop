@@ -2,15 +2,29 @@
   height: 4rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border: 1px solid;
 }
-.left-nav-cont {
-}
+
 .right-nav-cont {
   display: flex;
   justify-content: space-between;
-  gap: 130px;
+  gap: 10px;
+  position: relative;
+  left: 25rem;
+}
+
+.cart-items-count {
+  background-color: white;
+  width: 30px;
+  border-radius: 50px;
+  color: rgb(91, 67, 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: cursive;
 }
 
 .right-nav-cont span {
