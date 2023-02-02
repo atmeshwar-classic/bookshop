@@ -1,0 +1,16 @@
+Things that are missing
+
+    -I have not added the functionality where if the user adds same book twice then the count of that book
+     should be updated insted of it being added twice   
+
+        reason - since the type of the cart item was already made so I wanted to stick to the boiler plate of the assignment
+                 but it can be eailsy added in future by adding a prop in the cartitem type (eg. countOfItem : 0)
+
+    -I have not added route because I felt for just 2 components cart and bookpage, a drawer is a better approach, I have added
+     a appstate to keep track of which component is being used - cart or bookpage (howver I have not used it)
+
+
+Things that i have added apart from requirements
+
+    -I have added a loader which will be there for 4 sec (changed the getbook action for my loader to be noticed) until the 
+     books get loaded in the bookSlicer
