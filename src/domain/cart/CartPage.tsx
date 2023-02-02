@@ -1,11 +1,12 @@
-import { useSelector, useDispatch } from "react-redux";
 import { cartSelector, removeFromCart, getTotals } from "./cartSlice";
 import { Link } from "react-router-dom";
 import { CartItem } from "./types";
 import { useEffect } from "react";
+import { ToastContainer} from 'react-toastify'
+import { useAppDispatch, useAppSelector } from "../../store.hooks";
 const CartPage = (): JSX.Element => {
-  const cart = useSelector(cartSelector);
-  const dispatch = useDispatch();
+  const cart = useAppSelector(cartSelector);
+  const dispatch = useAppDispatch();
 
   const handleRemoveFromCart = (cartItem: CartItem) => {
     dispatch(removeFromCart(cartItem));
@@ -17,6 +18,7 @@ const CartPage = (): JSX.Element => {
 
   return (
     <div className="cart-container">
+      <ToastContainer/>
       <h2>Shopping Cart</h2>
       {cart.cartItems.length === 0 ? (
         <div className="cart-empty">

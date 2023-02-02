@@ -1,6 +1,6 @@
-import { useDispatch } from 'react-redux';
 import type { Book } from '../../domain/books/types'
 import { addToCart } from '../../domain/cart/cartSlice';
+import { useAppDispatch } from '../../store.hooks';
 
 /* 
   We would define the structure of the props in the same file as the component.
@@ -10,7 +10,7 @@ type BookProps = Book;
 
 export const BookCard = (book: BookProps): JSX.Element => {
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const handleAddToCart = (book: Book) => {
     dispatch(addToCart(book));
   };

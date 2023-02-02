@@ -1,13 +1,14 @@
-import { useSelector } from "react-redux";
 import { booksSelector } from "./booksSlice";
 import { Book } from "./types";
 import { BookCard } from "../../components/BookCard";
+import { ToastContainer} from 'react-toastify'
+import { useAppSelector } from "../../store.hooks";
 
 const BooksPage: React.FunctionComponent = () => {
-  const { books: books, loading } = useSelector(booksSelector);
-
+  const { books: books, loading } = useAppSelector(booksSelector)
   return (
     <div className="home-container">
+      <ToastContainer/>
       {loading === "loaded" ? (
         <>
           <h2>New Books Arrivals</h2>
