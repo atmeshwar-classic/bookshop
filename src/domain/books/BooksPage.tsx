@@ -10,7 +10,7 @@ const BooksPage: React.FunctionComponent = () => {
     <div className="home-container">
       {loading === "loaded" ? (
         <>
-          <h2>New Arrivals</h2>
+          <h2>New Books Arrivals</h2>
           <div className="books">
             {books &&
               books?.map((book: Book) => (

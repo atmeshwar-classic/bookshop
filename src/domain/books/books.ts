@@ -56,6 +56,6 @@ export const books: Book[] = [
     author: 'Me',
     description: 'A very good book',
     price: 20
-  }
+  } 
 
 ]
