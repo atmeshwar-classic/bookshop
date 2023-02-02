@@ -1,13 +1,22 @@
-import type { Book } from '../../domain/books/types'
+import type { Book } from "../../domain/books/types";
+import "./style.css";
 
-/* 
-  We would define the structure of the props in the same file as the component.
-  Since, this component has the same props as Type Book, we would assign it to it props.
-*/
-type BookProps = Book;
-
-export const BookCard = (props: BookProps): JSX.Element => {
-  return (
-    <div>Book Card</div>
-  )
+interface BookProps {
+  singlebook: Book;
 }
+
+export const BookCard = ({ singlebook }: BookProps): JSX.Element => {
+  return (
+    <div className="bookcard-container">
+      <div className="bookcard-name">{singlebook.name}</div>
+      <div className="bookcard-other-prop-cont">
+        <p>Author - {singlebook.author}</p>
+        <p>Descp - {singlebook.description}</p>
+        <p>Price - {singlebook.price}$</p>
+      </div>
+      <div className="bookcard-add-button">
+        <span>+</span>
+      </div>
+    </div>
+  );
+};

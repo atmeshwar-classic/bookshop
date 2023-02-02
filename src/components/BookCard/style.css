@@ -1,0 +1,27 @@
+.bookcard-container {
+  display: flex;
+  align-items: center;
+  border: 4px goldenrod solid;
+  width: 200px;
+  height: 200px;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.bookcard-name {
+  height: 40px;
+}
+
+.bookcard-other-prop-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bookcard-add-button span {
+  font-size: 20px;
+  font-weight: 900;
+  border: 2px solid gold;
+}

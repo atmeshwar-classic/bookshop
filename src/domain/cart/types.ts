@@ -4,3 +4,8 @@ export type CartItem = {
   description?: string;
   price: number;
 }
+
+
+export type CartState = {
+  cart : CartItem[]
+}

@@ -4,27 +4,14 @@ import { delay } from '../../utils/delay';
 import { books } from './books';
 import { Book, BooksState } from './types'
 
+//this requires 2 param, ->  
+// 1. is the name of the action and here books is the name of slice followed by action name
+// 2. is async fucntion
 export const getBooks = createAsyncThunk<Book[]>('books/get', async () => {
   // simulating a delay
-  await delay(3000);
+  await delay(2000);
   return books;
 })
-
-// The code below is how a real world async thunk would look like
-
-// export const getBooks = createAsyncThunk<Book[]>('books/get', async (_, thunkApi) => {
-//   const {rejectWithValue, signal} = thunkApi;
-
-//   const response = await fetch('/books', { signal });
-
-//   const data = await response.json();
-
-//   if (response.status !== 200) {
-//     return rejectWithValue(data as string)
-//   }
-
-//   return data as Book[];
-// })
 
 const initialState: BooksState = {
   books: [],

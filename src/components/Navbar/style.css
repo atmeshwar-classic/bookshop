@@ -1,0 +1,21 @@
+.navbar-container {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid;
+}
+.left-nav-cont {
+}
+.right-nav-cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 130px;
+}
+
+.right-nav-cont span {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: cursive;
+}

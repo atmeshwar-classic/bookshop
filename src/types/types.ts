@@ -4,3 +4,7 @@ export type DefaultLoadingState = {
   loading: DefaultLoadingStatus;
   error?: string;
 }
+
+export type AppState = {
+  isCartPage : boolean
+}
