@@ -19,8 +19,12 @@
 }
 
 .nav-bar a {
-  text-decoration: none;
+  text-decoration: none; 
   color: white;
+}
+
+.nav-bar a.active {
+  text-decoration: underline;
 }
 
 .nav-bar h2 {
