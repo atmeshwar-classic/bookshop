@@ -11,7 +11,7 @@
 
 .nav-bar {
   height: 70px;
-  background: black;
+  background: grey;
   display: flex;
   align-items: center;
   padding: 0 4rem;

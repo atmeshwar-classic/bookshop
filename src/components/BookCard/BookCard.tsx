@@ -16,7 +16,7 @@ export const BookCard = (book: BookProps): JSX.Element => {
   };
   return (
     <div key={book.id} className="book">
-      <img src={book.image} alt={book.name} />
+      <img src={book.image && book.image} alt={book.name} />
       <h3>{book.name}</h3>
       <h3>{book.author}</h3>
       <div className="details">

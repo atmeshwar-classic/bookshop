@@ -36,7 +36,7 @@ const CartPage = (): JSX.Element => {
               cart.cartItems.map((cartItem) => (
                 <div className="cart-item" key={cartItem.id}>
                   <div className="cart-product">
-                    <img src={cartItem.image} alt={cartItem.name} />
+                    <img src={cartItem.image && cartItem.image} alt={cartItem.name} />
                     <div>
                       <h3>{cartItem.name}</h3>
                       <p>{cartItem.description}</p>
