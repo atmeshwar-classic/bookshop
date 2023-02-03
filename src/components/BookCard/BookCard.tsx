@@ -7,7 +7,13 @@ import type { Book } from '../../domain/books/types'
 type BookProps = Book;
 
 export const BookCard = (props: BookProps): JSX.Element => {
+  const {id, name, author, description, price} = props;
   return (
-    <div>Book Card</div>
+    <div className='book-card' key={id}>
+      <div>{name}</div>
+      <div>{author}</div>
+      <div>{description}</div>
+      <div>{price}</div>
+    </div>
   )
 }
