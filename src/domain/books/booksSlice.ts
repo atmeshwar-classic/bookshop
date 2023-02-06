@@ -1,8 +1,8 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import type { RootState } from '../../store/store';
 import { delay } from '../../utils/delay';
 import { books } from './books';
-import { Book, BooksState } from './types'
+import { Book, BooksState } from './types';
 
 export const getBooks = createAsyncThunk<Book[]>('books/get', async () => {
   // simulating a delay
