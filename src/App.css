@@ -3,10 +3,9 @@ body {
 }
 
 .book-card {
-  /* flex-wrap: wrap; */
   border: 1px solid black;
   margin: 10px;
-  padding: 20px;
+  padding: 0 20px 20px;
   font-size: 30px;
 }
 
@@ -35,4 +34,9 @@ body {
 .book-page-container-flex {
   display: flex;
   flex-wrap: wrap;
+}
+
+.book-card-img {
+  background: aliceblue;
+  padding: 26px;
 }
