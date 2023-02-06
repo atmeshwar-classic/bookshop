@@ -21,7 +21,6 @@
 }
 
 .card {
-  display: flex;
   padding: 2em;
 }
 
@@ -30,9 +29,20 @@
 }
 
 .book-card {
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   border: 1px solid black;
   margin: 10px;
   padding: 20px;
   font-size: 30px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.book-page {
+  display: flex;
+  flex-wrap: wrap;
 }

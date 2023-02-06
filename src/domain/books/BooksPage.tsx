@@ -3,7 +3,7 @@ import { books } from "./books";
 
 export const BooksPage = (): JSX.Element => {
   return (
-    <>
+    <div className="book-page">
       {books.map((book) => {
         const { id, name, author, description, price } = book;
         console.log(name)
@@ -17,6 +17,6 @@ export const BooksPage = (): JSX.Element => {
             />
         );
       })}
-    </>
+    </div>
   );
 };
