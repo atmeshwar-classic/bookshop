@@ -18,14 +18,14 @@ const CartCard = ({ cartitem }: CartcardProps) => {
         <p>Price - {cartitem.price}</p>
         <p>Description - {cartitem.description}</p>
       </div>
-      <div className="remove-cartcard">
-        <span
-          onClick={() => {
-            dispatch(removeItem(cartitem.id));
-          }}
-        >
-          x
-        </span>
+      <div
+        className="remove-cartcard"
+        onClick={() => {
+          // console.log("checking");
+          dispatch(removeItem(cartitem.id));
+        }}
+      >
+        <span>x</span>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
   height: 4rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   border: 1px solid;
 }
 
@@ -10,8 +10,6 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  position: relative;
-  left: 25rem;
 }
 
 .cart-items-count {
@@ -28,6 +26,13 @@
 }
 
 .right-nav-cont span {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: cursive;
+}
+
+.left-nav-cont span {
   cursor: pointer;
   font-size: 20px;
   font-weight: 900;

@@ -10,11 +10,14 @@ const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
-    changeToCartPage(state,action){
+    changeToCartPage(state){
         state.isCartPage = true;
+    },
+     changeToBookPage(state){
+        state.isCartPage = false;
     }
   }
 })
 
 export const appSliceReducer = appSlice.reducer;
-export const { changeToCartPage } = appSlice.actions;
+export const { changeToCartPage,changeToBookPage } = appSlice.actions;

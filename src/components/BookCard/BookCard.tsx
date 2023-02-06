@@ -17,9 +17,12 @@ export const BookCard = ({ singlebook }: BookProps): JSX.Element => {
         <p>Descp - {singlebook.description}</p>
         <p>Price - {singlebook.price}$</p>
       </div>
-      <div className="bookcard-add-button">
-        <span onClick={() => dispatch(addCart(singlebook))}>+</span>
-      </div>
+      <span
+        className="bookcard-add-button"
+        onClick={() => dispatch(addCart(singlebook))}
+      >
+        +
+      </span>
     </div>
   );
 };

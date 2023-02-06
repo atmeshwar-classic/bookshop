@@ -12,7 +12,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     removeItem : (state,action:PayloadAction<string>) =>{
-        state.cart = state.cart.filter(e=>e.id != action.payload)
+        state.cart = state.cart.filter(e=>e.id !== action.payload)
     },
      addCart: {
       reducer: (state,action:PayloadAction<CartItem>) =>{
