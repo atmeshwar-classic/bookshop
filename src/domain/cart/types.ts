@@ -4,3 +4,7 @@ export type CartItem = {
   description?: string;
   price: number;
 }
+
+export interface CartProducts extends CartItem {
+  quantity: number
+}
