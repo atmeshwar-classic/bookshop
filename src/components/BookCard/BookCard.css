@@ -1,0 +1,26 @@
+.book-card {
+  border: 1px solid black;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.book-card-img {
+  background: aliceblue;
+  padding: 26px;
+}
+
+.book-card-contents {
+  line-height: 0px;
+  padding: 0 24px;
+}
+
+.book-card-contents > p {
+  padding: 0 0 12px;
+  font-weight: 500;
+  font-family: cursive;
+}
+
+.book-card-btn {
+  padding: 0 10px 10px;
+  float: right;
+}

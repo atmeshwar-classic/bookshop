@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { BookCard } from "../../components/BookCard";
 import { booksSelector } from "./booksSlice";
 import type { Book } from "./types";
+import "./BooksPage.css";
 
 export const BooksPage = (): JSX.Element => {
   const { books, loading } = useSelector(booksSelector);

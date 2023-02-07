@@ -1,0 +1,9 @@
+.book-page {
+  margin: 40px;
+}
+
+.book-page-container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

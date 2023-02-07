@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch } from "../../store/store";
 import { cartSelector, removeFromCart } from "./cartSlice";
-import { CartItem } from "./types";
+import "./CartPage.css";
 
 export const CartPage = (): JSX.Element => {
   const dispatch: AppDispatch = useDispatch();
@@ -28,7 +28,7 @@ export const CartPage = (): JSX.Element => {
             <td>{item.name}</td>
             <td>{item.author}</td>
             <td>{item.description}</td>
-            <td>{item.price}</td>
+            <td>${item.price}</td>
             <td>
               <button onClick={() => dispatch(removeFromCart(item.id))}>
                 Remove
