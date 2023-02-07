@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer } from "react-toastify";
 import type { AppDispatch } from "../../store/store";
 import { cartSelector, removeFromCart } from "./cartSlice";
 import { CartProducts } from "./types";
@@ -11,7 +10,6 @@ export const CartPage = (): JSX.Element => {
 
   return (
     <div className="container mx-auto mt-5 w-8/12">
-      <ToastContainer />
       <div className="flex shadow-lg my-10">
         <div className="w-full bg-white p-10">
           <div className="flex justify-between border-b pb-8">

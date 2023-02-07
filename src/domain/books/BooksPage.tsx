@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import { ToastContainer } from "react-toastify";
 import { BookCard } from "../../components/BookCard";
 import { booksSelector } from "./booksSlice";
 import type { Book } from "./types";
@@ -10,7 +9,6 @@ export const BooksPage = (): JSX.Element => {
   return (
     <div>
       <h1 className="ml-10 mt-10">Browse our book collection:</h1>
-      <ToastContainer draggable />
       {loading == "loading" ? (
         <div className="grid justify-items-center content-center mt-20">
           <div className="relative">
