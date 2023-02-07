@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/navBar/Navbar";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      Bookshop
+      <Navbar />
+      <AppRoutes />
+      <h1>Bookshop</h1>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

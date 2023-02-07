@@ -1,0 +1,41 @@
+nav {
+  height: 4rem;
+  /* padding: 1rem; */
+  color: white;
+}
+.navbar nav {
+  background-color: blueviolet;
+}
+.navbar nav ul {
+  display: flex;
+  max-width: 30rem;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+  font-size: 2rem;
+}
+.navbar nav ul li {
+  height: 100%;
+  transition: all 0.1s;
+}
+.navbar nav ul li:hover,
+.navbar nav ul li.active {
+  transform: translateY(5px);
+  color: rgb(207, 193, 193);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border: 1px solid #fff;
+}
+.navbar nav ul li:visited {
+  color: white;
+}
+.navbar nav ul a {
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
