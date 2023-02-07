@@ -13,29 +13,9 @@ const BooksPage: React.FunctionComponent = () => {
     dispatch(getBooks())
   }, [])
 
- /*  const renderContent = () => {
+  const renderContent = () => {
     if (loading === "loaded") {
-      <>
-        <h2>New Books Arrivals</h2>
-        <div className="books">
-          {books &&
-            books?.map((book: Book) => (
-              <BookCard {...book} />
-            )
-            )}
-        </div>
-      </>
-    }
-    else if (loading === "loading") {
-      <p>Loading...</p>
-    }
-    else {
-      <p>Unexpected error occured...</p>
-    }
-  } */
-  return (
-    <div className="home-container">
-       {loading === "loaded" ? (
+      return (
         <>
           <h2>New Books Arrivals</h2>
           <div className="books">
@@ -46,11 +26,22 @@ const BooksPage: React.FunctionComponent = () => {
               )}
           </div>
         </>
-      ) : loading === "loading" ? (
+      )
+    }
+    else if (loading === "loading") {
+      return (
         <p>Loading...</p>
-      ) : (
+      )
+    }
+    else {
+      return (
         <p>Unexpected error occured...</p>
-      )} 
+      )
+    }
+  }
+  return (
+    <div className="home-container">
+      {renderContent()}
     </div>
   );
 }
