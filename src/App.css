@@ -11,6 +11,7 @@ body {
 .navLink {
   text-decoration: none;
   color: black;
+  font-family: sans-serif;
   margin-left: 20px;
 }
 
