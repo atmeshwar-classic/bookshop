@@ -12,17 +12,17 @@ type BookProps = Book;
 
 export const BookCard = (props: BookProps): JSX.Element => {
   const dispatch: AppDispatch = useDispatch();
-
+  const { name, author, description, price } = props;
   return (
     <div className="book-card">
       <div className="book-card-img">
         <img alt="Book Image" />
       </div>
       <div className="book-card-contents">
-        <p className="book-name">{props.name}</p>
-        <p className="book-author">{props.author}</p>
-        <p className="book-description">{props.description}</p>
-        <p className="book-price">${props.price}</p>
+        <p className="book-name">{name}</p>
+        <p className="book-author">{author}</p>
+        <p className="book-description">{description}</p>
+        <p className="book-price">${price}</p>
       </div>
       <div className="book-card-btn">
         <button onClick={() => dispatch(addToCart(props))}>Add to Cart</button>
