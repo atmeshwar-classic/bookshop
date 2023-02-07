@@ -1,7 +1,7 @@
 import type { Book } from '../../domain/books/types'
 import { addToCart } from '../../domain/cart/cartSlice';
 import { useAppDispatch } from '../../store.hooks';
-
+import "./bookcard.styles.css"
 /* 
   We would define the structure of the props in the same file as the component.
   Since, this component has the same props as Type Book, we would assign it to it props.

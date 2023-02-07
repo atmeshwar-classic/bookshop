@@ -1,0 +1,38 @@
+.nav-bar {
+    height: 70px;
+    background: grey;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    column-gap: 30px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar a.active {
+    text-decoration: underline;
+}
+
+.nav-bar h2 {
+    font-size: 40px;
+}
+
+.nav-bag {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 665px) {
+
+    /* NavBar */
+    .nav-bar {
+        padding: 0 1rem;
+    }
+
+    .nav-bar h2 {
+        font-size: 30px;
+    }
+}
