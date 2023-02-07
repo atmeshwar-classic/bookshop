@@ -26,3 +26,15 @@ th {
   font-family: 'Courier New', Courier, monospace;
   color: darkgreen;
 }
+
+.cart-total {
+  padding: 60px;
+  margin-right: 90px;
+  font-size: xx-large;
+  float: right;
+}
+
+.cart-total span {
+  font-weight: 600;
+  color: darkslategrey;
+}

@@ -10,7 +10,7 @@ export const BooksPage = (): JSX.Element => {
   return (
     <div className="book-page">
       {loading == "loading" ? (
-        "Loading ..."
+        <div className="book-loading">Loading ...</div>
       ) : (
         <div className="book-page-container">
           <div className="book-page-container-flex">

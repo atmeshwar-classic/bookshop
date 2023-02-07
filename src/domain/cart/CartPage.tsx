@@ -6,9 +6,8 @@ import "./CartPage.css";
 export const CartPage = (): JSX.Element => {
   const dispatch: AppDispatch = useDispatch();
   const cartItems = useSelector(cartSelector);
-  console.log("cart", cartItems);
   const totalAmount = cartItems.reduce(
-    (acc, c) => (acc += (c.price, c.quantity)),
+    (acc, curr) => (acc += curr.price * curr.quantity),
     0
   );
   console.log(totalAmount);
@@ -16,12 +15,14 @@ export const CartPage = (): JSX.Element => {
   return (
     <div className="cart-page">
       {cartItems.length !== 0 ? (
+      <>
         <table>
           <tr>
             <th>Name</th>
             <th>Author</th>
             <th>Description</th>
             <th>Price</th>
+            <th>Quantity</th>
             <th>Action</th>
           </tr>
           {cartItems.map((item) => (
@@ -30,6 +31,7 @@ export const CartPage = (): JSX.Element => {
               <td>{item.author}</td>
               <td>{item.description}</td>
               <td>${item.price}</td>
+              <td>{item.quantity}</td>
               <td>
                 <button onClick={() => dispatch(removeFromCart(item.id))}>
                   Remove
@@ -38,6 +40,8 @@ export const CartPage = (): JSX.Element => {
             </tr>
           ))}
         </table>
+        <div className="cart-total">Total: <span>${totalAmount}</span></div>
+        </>
       ) : (
         <div className="empty-cart">Your cart is empty</div>
       )}
