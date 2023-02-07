@@ -24,3 +24,19 @@
   padding: 0 10px 10px;
   float: right;
 }
+
+.book-name {
+  font-size: 1.1em;
+}
+
+.book-author {
+  font-size: 25px;
+}
+
+.book-description {
+  font-size: 22px;
+}
+
+.book-price {
+  font-size: 20px;
+}

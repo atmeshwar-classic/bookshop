@@ -19,10 +19,10 @@ export const BookCard = (props: BookProps): JSX.Element => {
         <img alt="Book Image" />
       </div>
       <div className="book-card-contents">
-        <p style={{ fontSize: "1.1em" }}>{props.name}</p>
-        <p style={{ fontSize: "25px" }}>{props.author}</p>
-        <p style={{ fontSize: "22px" }}>{props.description}</p>
-        <p style={{ fontSize: "20px" }}>${props.price}</p>
+        <p className="book-name">{props.name}</p>
+        <p className="book-author">{props.author}</p>
+        <p className="book-description">{props.description}</p>
+        <p className="book-price">${props.price}</p>
       </div>
       <div className="book-card-btn">
         <button onClick={() => dispatch(addToCart(props))}>Add to Cart</button>
