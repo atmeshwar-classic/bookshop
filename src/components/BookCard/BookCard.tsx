@@ -14,13 +14,13 @@ export const BookCard = (props: BookProps): JSX.Element => {
   return (
     <div className="book-card">
       <div className="book-card-img">
-        <img alt="Cover Page" />
+        <img alt="Book Image" />
       </div>
       <div className="book-card-contents">
-        <h1>{props.name}</h1>
-        <h3>{props.author}</h3>
-        <p>{props.description}</p>
-        <p>${props.price}</p>
+        <p style={{fontSize: "1.1em"}}>{props.name}</p>
+        <p style={{fontSize: "25px"}}>{props.author}</p>
+        <p style={{fontSize: "22px"}}>{props.description}</p>
+        <p style={{fontSize: "20px"}}>${props.price}</p>
       </div>
       <div className="book-card-btn">
         <button onClick={() => dispatch(addToCart(props))}>Add to Cart</button>
