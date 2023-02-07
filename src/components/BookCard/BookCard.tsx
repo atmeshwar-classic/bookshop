@@ -34,12 +34,7 @@ export const BookCard = (props: BookProps): JSX.Element => {
           >
             <p className="ml-2 text-sm">{props.author}</p>
           </a>
-          <a
-            className="no-underline text-grey-darker hover:text-red-dark"
-            href="#"
-          >
-            <button onClick={() => dispatch(addToCart(props))}>Add to Cart</button>
-          </a>
+            <button className="no-underline text-grey-darker hover:text-red-dark" onClick={() => dispatch(addToCart(props))}>Add to Cart</button>
         </footer>
       </article>
     </div>
