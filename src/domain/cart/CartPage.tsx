@@ -15,28 +15,32 @@ export const CartPage = (): JSX.Element => {
 
   return (
     <div className="cart-page">
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Author</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Action</th>
-        </tr>
-        {cartItems.map((item) => (
-          <tr key={item.id}>
-            <td>{item.name}</td>
-            <td>{item.author}</td>
-            <td>{item.description}</td>
-            <td>${item.price}</td>
-            <td>
-              <button onClick={() => dispatch(removeFromCart(item.id))}>
-                Remove
-              </button>
-            </td>
+      {cartItems.length !== 0 ? (
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Action</th>
           </tr>
-        ))}
-      </table>
+          {cartItems.map((item) => (
+            <tr key={item.id}>
+              <td>{item.name}</td>
+              <td>{item.author}</td>
+              <td>{item.description}</td>
+              <td>${item.price}</td>
+              <td>
+                <button onClick={() => dispatch(removeFromCart(item.id))}>
+                  Remove
+                </button>
+              </td>
+            </tr>
+          ))}
+        </table>
+      ) : (
+        <div className="empty-cart">Your cart is empty</div>
+      )}
     </div>
   );
 };

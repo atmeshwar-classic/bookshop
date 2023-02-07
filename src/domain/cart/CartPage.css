@@ -20,3 +20,9 @@ th {
 .cart-page {
   padding: 36px;
 }
+
+.empty-cart {
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color: darkgreen;
+}
