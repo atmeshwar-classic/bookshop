@@ -4,12 +4,10 @@ import type { RootState } from '../../store/store';
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { Book } from "../books/types";
-const initialState: CartState = {
+const initialState: CartState= {
     cartItems: localStorage.getItem("cartItems")
         ? JSON.parse(localStorage.getItem("cartItems")!)
-        : [],
-    cartTotalQuantity: 0,
-    cartTotalAmount: 0,
+        : [], 
 };
 
 const cartSlice = createSlice({
@@ -55,28 +53,9 @@ const cartSlice = createSlice({
                 return state;
             });
         },
-
-        getTotals(state, action: PayloadAction) {
-            let { total, quantity } = state.cartItems.reduce(
-                (cartTotal, cartItem) => {
-                    const { price, cartQuantity } = cartItem;
-                    const itemTotal:number = price * cartQuantity;
-                    cartTotal.total += itemTotal;
-                    cartTotal.quantity += cartQuantity;
-                    return cartTotal;
-                },
-                {
-                    total: 0,
-                    quantity: 0,
-                }
-            );
-            total = parseFloat(total.toFixed(2));
-            state.cartTotalQuantity = quantity;
-            state.cartTotalAmount = total;
-        },
     },
 });
 
-export const { addToCart, removeFromCart, getTotals } = cartSlice.actions;
+export const { addToCart, removeFromCart } = cartSlice.actions;
 export const cartSliceReducer = cartSlice.reducer;
 export const cartSelector = (state: RootState) => state.cartItems;

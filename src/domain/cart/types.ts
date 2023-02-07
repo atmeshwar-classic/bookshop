@@ -6,6 +6,4 @@ export interface CartItem extends Book {
 
 export type CartState = {
   cartItems: CartItem[];
-  cartTotalQuantity: number
-  cartTotalAmount: number
 }

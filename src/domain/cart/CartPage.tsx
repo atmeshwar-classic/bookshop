@@ -1,20 +1,18 @@
-import { cartSelector, removeFromCart, getTotals } from "./cartSlice";
+import { cartSelector, removeFromCart } from "./cartSlice";
 import { Link } from "react-router-dom";
-import { CartItem } from "./types";
-import { useEffect } from "react";
+import { CartItem, CartState } from "./types";
 import { useAppDispatch, useAppSelector } from "../../store.hooks";
-import "./cartpage.styles.css"
+import "./cartpage.styles.css";
+
 const CartPage = (): JSX.Element => {
-  const cart = useAppSelector(cartSelector);
+  const cart:CartState = useAppSelector(cartSelector);
   const dispatch = useAppDispatch();
 
   const handleRemoveFromCart = (cartItem: CartItem) => {
     dispatch(removeFromCart(cartItem));
   };
 
-  useEffect(() => {
-    dispatch(getTotals());
-  }, [cart, dispatch]);
+  const total = cart.cartItems.reduce((a, c) => (a += c.price * c.cartQuantity), 0);
 
   return (
     <div className="cart-container">
@@ -60,7 +58,7 @@ const CartPage = (): JSX.Element => {
             <div className="cart-checkout">
               <div className="subtotal">
                 <span>Total</span>
-                <span className="amount">${cart.cartTotalAmount}</span>
+                 <span className="amount">${total}</span> 
               </div>
             </div>
           </div>
