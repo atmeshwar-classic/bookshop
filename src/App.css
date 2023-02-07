@@ -56,3 +56,27 @@ body {
   padding: 0 10px 10px;
   float: right;
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:hover {background-color: #D6EEEE;}
+
+.cart-page {
+  padding: 36px;
+}
+
+th {
+  font-size: 1.3em;
+}
