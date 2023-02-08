@@ -13,7 +13,7 @@ const CartPage = (): JSX.Element => {
     dispatch(removeFromCart(cartItem));
   };
 
-  const totalAmount = total(cart)
+  const totalAmount = total(cart.cartItems)
 
   return (
     <div className="cart-container">
