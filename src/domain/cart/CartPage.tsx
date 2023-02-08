@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CartItem, CartState } from "./types";
 import { useAppDispatch, useAppSelector } from "../../store.hooks";
 import "./cartpage.styles.css";
+import { total } from "../../utils/total";
 
 const CartPage = (): JSX.Element => {
   const cart:CartState = useAppSelector(cartSelector);
@@ -12,7 +13,7 @@ const CartPage = (): JSX.Element => {
     dispatch(removeFromCart(cartItem));
   };
 
-  const total = cart.cartItems.reduce((a, c) => (a += c.price * c.cartQuantity), 0);
+  const totalAmount = total(cart)
 
   return (
     <div className="cart-container">
@@ -58,7 +59,7 @@ const CartPage = (): JSX.Element => {
             <div className="cart-checkout">
               <div className="subtotal">
                 <span>Total</span>
-                 <span className="amount">${total}</span> 
+                 <span className="amount">${totalAmount}</span> 
               </div>
             </div>
           </div>
