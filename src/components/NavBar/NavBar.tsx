@@ -8,7 +8,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
     <nav className="flex items-center justify-start flex-wrap bg-teal-500 p-6">
       <ul className="flex justify-evenly">
         <li className="mx-10">
-          <Link to="/books">Books</Link>
+          <Link to="/">Books</Link>
         </li>
         <li className="mx-10">
           <Link to="/cart">Cart</Link>
