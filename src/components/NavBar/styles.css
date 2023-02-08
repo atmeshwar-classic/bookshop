@@ -1,0 +1,11 @@
+.navbar-container {
+    background-color: #e6e6e6;
+    font-size: 24px;
+    padding: 30px;
+}
+
+.navbar-element {
+    color: #242323;
+    padding: 12px;
+    text-decoration: none;
+}
