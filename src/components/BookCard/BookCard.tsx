@@ -25,7 +25,9 @@ export const BookCard = (book: BookProps): JSX.Element => {
       <h5>Title: {book.name}</h5>
       <h5>Author: {book.author}</h5>
       <h6>Description: {book.description}</h6>
-      <p>$ {book.price}</p>
+      <p>
+        <strong>$ {book.price}</strong>
+      </p>
     </div>
   );
 };
