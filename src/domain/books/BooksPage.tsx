@@ -21,7 +21,7 @@ const BooksPage: React.FunctionComponent = () => {
           <div className="books">
             {books &&
               books?.map((book: Book) => (
-                <BookCard {...book} />
+                <BookCard {...book} key={book.id}/>
               )
               )}
           </div>

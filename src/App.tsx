@@ -11,7 +11,7 @@ function App() {
         <NavBar />
         <div className="content-container">
           <Routes>
-            {routes.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
+            {routes.map(({ path, Component }, key) => <Route path={path} element={<Component />} key={key}/>)}
           </Routes>
         </div>
       </BrowserRouter>
