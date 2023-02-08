@@ -35,7 +35,8 @@ const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    cleanupBooks: () => initialState
+    cleanupBooks: () => initialState,
+    // addBook:(bookobj:Book)=>void,
   },
   extraReducers: (builder) => {
     builder

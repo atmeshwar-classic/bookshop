@@ -3,6 +3,7 @@ import { booksSliceReducer } from '../domain/books/booksSlice'
 
 const combinedReducer = combineReducers({
   books: booksSliceReducer
+  // cart:cartSliceReducer
 });
 
 export const store = configureStore({
