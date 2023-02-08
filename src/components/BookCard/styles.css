@@ -1,0 +1,31 @@
+.card-container {
+    display: flex;
+    align-items: center;
+    border: 4px goldenrod solid;
+    width: 200px;
+    height: 300px;
+    flex-direction: column;
+    /* padding: 10px; */
+    justify-content: space-between;
+  }
+  
+  .card-container p {
+    /* height: 10px; */
+    
+  }
+  .card-container h5 {
+    /* height: 0px; */
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    justify-content: left;
+    /* align-items: flex-start; */
+  }
+  .book-img {
+    display: flex;
+    background-color: #e6e6e6;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+  }

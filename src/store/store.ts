@@ -1,13 +1,15 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { booksSliceReducer } from '../domain/books/booksSlice'
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { booksSliceReducer } from "../domain/books/booksSlice";
+import { cartSliceReducer } from "../domain/cart/cartSlice";
 
 const combinedReducer = combineReducers({
-  books: booksSliceReducer
+  books: booksSliceReducer,
+  cart: cartSliceReducer,
 });
 
 export const store = configureStore({
-  reducer: combinedReducer
-})
+  reducer: combinedReducer,
+});
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
