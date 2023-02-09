@@ -4,19 +4,20 @@ import { Book } from "../books/types";
 import { CartState } from "./types";
 
 const initialState: CartState = {
-  cart: []
+  cart: [],
+  loading: 'not loaded',
 };
 
 
 const cartSlice = createSlice({
-  initialState,
   name: "cart",
+  initialState,
   reducers: {
     addToCart: (state, { payload }: PayloadAction<Book>) => {
       state.cart = [...state.cart, payload];
     },
     removeFromCart: (state, { payload }: PayloadAction<string>) => {
-      state.cart = state.cart.filter(e => e.id !== payload);
+      state.cart = state.cart.filter(item => item.id !== payload);
     },
   },
 });

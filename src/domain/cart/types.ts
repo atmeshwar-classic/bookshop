@@ -1,3 +1,5 @@
+import { DefaultLoadingState } from "../../types";
+
 export type CartItem = {
   id: string;
   name: string;
@@ -6,6 +8,6 @@ export type CartItem = {
   price: number;
 }
 
-export type CartState = {
+export type CartState = DefaultLoadingState & {
   cart: CartItem[];
 };
