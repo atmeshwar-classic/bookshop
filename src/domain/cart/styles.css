@@ -1,0 +1,33 @@
+.cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e6e6e6;
+    width: max-content;
+    padding: 50px;
+}
+
+.cart-box {
+    display: flex;
+    padding: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-container {
+    width: 98%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.total-price {
+    padding: 10px;
+    padding-left: 53%;
+    border-right: 2px #bbbbbb solid;
+}
