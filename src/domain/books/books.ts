@@ -3,44 +3,44 @@ import { Book } from "./types";
 export const books: Book[] = [
   {
     id: '123',
-    name: 'Book',
-    author: 'Me',
+    name: 'The Blue Umbrella',
+    author: 'Ruskin Bond',
     description: 'A very good book',
-    price: 20
+    price: 199
   },
   {
     id: '124',
-    name: 'Book',
-    author: 'Me',
+    name: 'Broken Republic',
+    author: 'Arundhati Roy',
     description: 'A very good book',
-    price: 20
+    price: 119
   },
   {
     id: '125',
-    name: 'Book',
-    author: 'Me',
+    name: 'The White Tiger',
+    author: 'Aravind Adiga',
     description: 'A very good book',
-    price: 20
+    price: 319
   },
   {
     id: '129',
-    name: 'Book',
-    author: 'Me',
+    name: 'two lives',
+    author: 'Vikram Seth',
     description: 'A very good book',
-    price: 20
+    price: 219
   },
   {
     id: '126',
-    name: 'Book',
-    author: 'Me',
+    name: 'River of Smoke',
+    author: 'Amitav Ghosh',
     description: 'A very good book',
-    price: 20
+    price: 209
   },
   {
     id: '127',
-    name: 'Book',
-    author: 'Me',
+    name: 'A Suitable Boy',
+    author: 'Vikram Seth',
     description: 'A very good book',
-    price: 20
+    price: 329
   }
 ]

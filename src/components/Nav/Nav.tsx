@@ -5,10 +5,10 @@ const Nav = () => {
   return (
     <div className="nav">
       <Link to="/" className="nav-link">
-        Books
+        books
       </Link>
       <Link to="/cart" className="nav-link">
-        Cart
+        cart
       </Link>
     </div>
   );
