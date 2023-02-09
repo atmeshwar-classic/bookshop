@@ -5,7 +5,9 @@ import bookpic from "./../../assets/book1.jpg";
 import { AppDispatch } from "../../store/store";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, cartSelector } from "../../domain/cart/cartSlice";
-import { CartItem } from "../../domain/cart/types";
+import { CartItem, CartState } from "../../domain/cart/types";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 /* 
 We would define the structure of the props in the same file as the component.
 Since, this component has the same props as Type Book, we would assign it to it props.
@@ -17,11 +19,29 @@ export const BookCard = (props: BookProps): JSX.Element => {
   const cart = useSelector(cartSelector);
   const dispatch: AppDispatch = useDispatch();
 
+  function checkCart<T extends CartItem[], U extends Book>(
+    cart: T,
+    props: U
+  ): boolean {
+    for (let c of cart) {
+      if (c.id === props.id) return false;
+    }
+    return true;
+  }
   const onAddClickHandler = () => {
-    console.log("clicked");
     if (!togglebutton) {
-      dispatch(addToCart({ ...props }));
-      setToggleButton(!togglebutton);
+      if (checkCart(cart, props)) {
+        // console.log("clicked");
+        dispatch(addToCart({ ...props }));
+        setToggleButton(!togglebutton);
+        toast.success("Added to cart");
+      } else {
+        toast.error("Already in cart", {
+          closeOnClick: true,
+          theme: "light",
+          icon: false,
+        });
+      }
     }
   };
 
@@ -38,28 +58,17 @@ export const BookCard = (props: BookProps): JSX.Element => {
       </div>
       <div className={classes.BookAddicon}>
         <button
-          disabled={togglebutton === true}
+          disabled={!checkCart(cart, props) === true}
           onClick={onAddClickHandler}
         >
-          {togglebutton ? (
+          {!checkCart(cart, props) ? (
             <i className="fa fa-minus"></i>
           ) : (
             <i className="fa fa-plus" aria-hidden="true"></i>
           )}
         </button>
+        <ToastContainer closeOnClick theme="dark" />
       </div>
     </div>
   );
 };
-
-// extra
-// const canBeAddedInCart=(currentid: string): boolean=> {
-//   for(let item of cart){
-//     if(item.id===currentid){
-//       return false;
-//     }
-//   }
-//   return true;
-//   }
-
-// }

@@ -21,18 +21,16 @@ const cartSlice = createSlice({
           description: action.payload.description,
         },
       ];
-      // console.log(state.cart);
     },
 
     //remove from cart using id of the bookitem
     removeFromCart: (state, action: PayloadAction<string>) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload);
-      console.log(state.cart);
     },
     cleanCart: (state) => initialState,
   },
 });
 
-export const { addToCart, removeFromCart ,cleanCart} = cartSlice.actions;
+export const { addToCart, removeFromCart, cleanCart } = cartSlice.actions;
 export const cartSliceReducer = cartSlice.reducer;
 export const cartSelector = (state: RootState) => state.cart.cart;

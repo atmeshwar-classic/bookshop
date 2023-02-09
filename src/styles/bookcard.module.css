@@ -17,7 +17,6 @@
 }
 
 .BookAddicon button {
-  /* background: transparent; */
   font-size: 32px;
   height: 100%;
   width: 100%;
@@ -27,10 +26,6 @@
   color: white;
   transition: all 0.2s;
 }
-/* .BookAddicon button i {
-  height: 100%;
-  width: 100%;
-} */
 .BookAddicon button:enabled {
   cursor: pointer;
 }
@@ -50,4 +45,7 @@
 .bookCardContainer img {
   height: 100px;
   width: 200px;
+}
+:root{
+  --toastify-toast-width: 500px;
 }

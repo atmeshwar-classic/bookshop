@@ -3,10 +3,9 @@ import { CartItem } from "./types";
 import cross from "./../../assets/cross.svg";
 import book from "./../../assets/book1.jpg";
 import { AppDispatch } from "../../store/store";
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { removeFromCart, cartSelector } from "../../domain/cart/cartSlice";
 export const CartCard = (props: CartItem): JSX.Element => {
-  const cart = useSelector(cartSelector);
   const dispatch: AppDispatch = useDispatch();
   return (
     <div className={classes.cartCardContainer}>
@@ -25,9 +24,9 @@ export const CartCard = (props: CartItem): JSX.Element => {
       <div
         className={classes.BookRemoveicon}
         onClick={() => {
-          console.log("clicked");
+          // console.log("clicked");
           dispatch(removeFromCart(props.id));
-          // remove from cart  ---- call with bookitem prop
+          // remove from cart  
         }}
       >
         <img src={cross}></img>
