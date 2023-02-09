@@ -1,20 +1,29 @@
 import { useSelector } from "react-redux";
 import { cartSelector } from "./cartSlice";
+import { CartItem } from "./types";
+import { CartCard } from "../../components/CartCard/CartCard";
+import { totalPrice } from "../../utils/totalPrice";
 import "./CartPage.css";
 
 export const CartPage = (): JSX.Element => {
-  const cartItems = useSelector(cartSelector);
+
+  const { cart } = useSelector(cartSelector);
 
   return (
     <div className="cart-wrapper">
-      {!cartItems.cart.length ? (
-        <span>uh oh! no items inside cart</span>
+      {!cart.length ? (
+        <span>uh oh! no books inside cart</span>
       ) : (
         <div className="cart-items-wrapper">
-          {/* TODO: add CartCard component here */}
+            {cart.map((cartitem: CartItem) => (
+              <CartCard
+                {...cartitem}
+                key={cartitem.id}
+              />
+            ))}
           <div className="cart-total">
             <span className="cart-total-price">
-             {/* TODO: add total price here */}
+              amount - ₹{totalPrice(cart)}
             </span>
           </div>
         </div>

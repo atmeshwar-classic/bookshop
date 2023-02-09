@@ -1,16 +1,21 @@
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../store/store";
 import type { Book } from '../../domain/books/types'
+import { addToCart } from "../../domain/cart/cartSlice";
 // import "./BookCard.css";
 
 /* 
   We would define the structure of the props in the same file as the component.
   Since, this component has the same props as Type Book, we would assign it to it props.
 */
+
 type BookProps = Book;
 
-export const BookCard = ({name, author, description, price}: BookProps): JSX.Element => {
+export const BookCard = (book: BookProps): JSX.Element => {
+
   const dispatch: AppDispatch = useDispatch();
+  const { name, author, description, price } = book;
+
   return (
     <div className="book-card-wrapper">
       <div className="book-card-image">
@@ -29,6 +34,9 @@ export const BookCard = ({name, author, description, price}: BookProps): JSX.Ele
         <p className="book-card-price">
           ₹{price}
         </p>
+      </div>
+      <div className="cart-add" onClick={() => {dispatch(addToCart(book))}}>
+        <span className='cart-add-button'>&#43;</span>
       </div>
     </div>
   );
