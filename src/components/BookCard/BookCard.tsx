@@ -31,12 +31,12 @@ export const BookCard = (book: BookProps): JSX.Element => {
         <p className="book-card-desc">
           {description.toLowerCase()}
         </p>
-        <p className="book-card-price">
-          ₹{price}
-        </p>
-      </div>
-      <div className="cart-add" onClick={() => {dispatch(addToCart(book))}}>
-        <span className='cart-add-button'>&#43;</span>
+        <div className="book-card-price">
+          <span className="book-card-price">
+            ₹{price}
+          </span>
+          <button type="button" className='cart-add-button' onClick={() => { dispatch(addToCart(book)) }}>add to cart</button>
+        </div>
       </div>
     </div>
   );

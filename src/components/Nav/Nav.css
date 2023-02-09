@@ -1,1 +1,11 @@
-/* TODO: create nav css */
+.navbar {
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar:first-child {
+  padding-left: 20px;
+}

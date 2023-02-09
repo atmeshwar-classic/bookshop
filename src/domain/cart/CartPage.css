@@ -1,1 +1,16 @@
-/* TODO: create cart page css */
+.cart-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.cart-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 600px;
+  gap: 25px;
+}
+
+.cart-total {
+  text-align: right;
+}

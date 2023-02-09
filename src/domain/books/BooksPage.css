@@ -1,1 +1,10 @@
-/* TODO: books page css */
+.books-page-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.books-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}

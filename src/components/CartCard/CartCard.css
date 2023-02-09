@@ -1,0 +1,20 @@
+.cart-card-wrapper {
+  border: 1px solid #535bf2;
+  border-radius: 7px;
+  padding: 20px;
+  display: flex;
+}
+
+.cart-card-wrapper div {
+  flex: 1;
+}
+
+.cart-card-wrapper .item-price, .cart-card-wrapper .cart-remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-card-wrapper .item-price {
+  justify-content: flex-end;
+}

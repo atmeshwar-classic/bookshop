@@ -1,1 +1,31 @@
-/* TODO: create book card css */
+.book-card-wrapper {
+  width: 300px;
+  border: 1px solid #535bf2;
+  border-radius: 7px;
+  padding: 20px;
+}
+
+.book-card-image img {
+  height: auto;
+}
+
+.book-card-about .book-card-name {
+  margin-bottom: 0;
+}
+
+.book-card-about .book-card-author {
+  font-style: italic;
+  margin-top: 0;
+}
+
+.book-card-about .book-card-price {
+  /* height: 45px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+}
+
+.cart-add-button:hover {
+  color: #535bf2;
+}
