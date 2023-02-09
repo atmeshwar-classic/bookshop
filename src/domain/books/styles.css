@@ -6,4 +6,6 @@
  .book-list {
      display: flex;
      padding: 40px;
+     flex-wrap: wrap;
+     justify-content: center;
  }

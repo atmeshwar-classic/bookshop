@@ -11,20 +11,23 @@ export const BooksPage = (): JSX.Element => {
 
   useEffect(() => {
     dispatch(getBooks());
-  }, [Bookdata]);
+  }, []);
 
-  return (
-    <div className="book-page-container">
-      <>{console.log(Bookdata)}</>
-      {Bookdata.length === 0 ? (
-        <div>Loading...</div>
-      ) : (
+  const renderBooks = () => {
+    if (Bookdata.loading === "loaded") {
+      return (
         <div className="book-list">
-          {Bookdata.map((book) => (
+          {Bookdata.books.map((book) => (
             <BookCard {...book} key={book.id} />
           ))}
         </div>
-      )}
-    </div>
-  );
+      );
+    } else if (Bookdata.loading === "loading") {
+      return <div>{Bookdata.loading}...</div>;
+    } else {
+      return <div>An error occured...</div>;
+    }
+  };
+
+  return <div className="book-page-container">{renderBooks()}</div>;
 };

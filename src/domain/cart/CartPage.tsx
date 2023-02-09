@@ -19,7 +19,7 @@ export const CartPage = (): JSX.Element => {
           })}
           <div className="price-container">
             <div className="total-price">
-              Total {priceTotal(cartData.cart)} $
+              Total $ {priceTotal(cartData.cart)}
             </div>
           </div>
         </div>
