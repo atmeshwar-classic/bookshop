@@ -30,7 +30,6 @@ export const CartCard = (props: CartItem): JSX.Element => {
           // remove from cart  ---- call with bookitem prop
         }}
       >
-        {/* <i className="fa-sharp fa-solid fa-xmark" aria-hidden="true"></i> */}
         <img src={cross}></img>
       </div>
     </div>
