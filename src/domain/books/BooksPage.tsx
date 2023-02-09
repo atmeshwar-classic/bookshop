@@ -4,7 +4,7 @@ import { BookCard } from "../../components/BookCard/BookCard";
 import { getBooks, booksSelector } from "./booksSlice";
 import { AppDispatch } from "../../store/store";
 import classes from "./../../styles/booksPage.module.css";
-import { cartSelector } from "../cart/cartSlice";
+import { cartSelector ,cleanCart} from "../cart/cartSlice";
 
 export const BooksPage = (): JSX.Element => {
   const dispatch: AppDispatch = useDispatch();
@@ -13,7 +13,7 @@ export const BooksPage = (): JSX.Element => {
 
   useEffect(() => {
     dispatch(getBooks());
-    
+    dispatch(cleanCart());
   }, []);
 
   return (
