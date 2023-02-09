@@ -18,7 +18,7 @@ body {
 }
 .App{
   border: 1px solid black;
-  min-height: 90vh;
+  min-height: 70vh;
   width: 90vw;
   max-width: 95%;
   scroll-behavior: smooth;

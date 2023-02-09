@@ -4,13 +4,16 @@ import { BookCard } from "../../components/BookCard/BookCard";
 import { getBooks, booksSelector } from "./booksSlice";
 import { AppDispatch } from "../../store/store";
 import classes from "./../../styles/booksPage.module.css";
+import { cartSelector } from "../cart/cartSlice";
 
 export const BooksPage = (): JSX.Element => {
   const dispatch: AppDispatch = useDispatch();
   const { books, loading } = useSelector(booksSelector);
+  const cart = useSelector(cartSelector);
 
   useEffect(() => {
     dispatch(getBooks());
+    
   }, []);
 
   return (

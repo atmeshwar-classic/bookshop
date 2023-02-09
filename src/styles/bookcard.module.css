@@ -12,20 +12,39 @@
 .bookCardDescription {
 }
 .BookAddicon {
-  background-color: grey;
+  font-size: 32px;
+  height: 40px;
+}
+
+.BookAddicon button {
+  /* background: transparent; */
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background-color: greenyellow;
   opacity: 0.8;
   color: white;
-  cursor: pointer;
   transition: all 0.2s;
-  /* position: absolute;
-  top: 10px;
-  right: 10px; */
-  font-size: 32px;
-  /* border-radius: 50%; */
 }
-.BookAddicon:hover {
+/* .BookAddicon button i {
+  height: 100%;
+  width: 100%;
+} */
+.BookAddicon button:enabled {
+  cursor: pointer;
+}
+.BookAddicon button[disabled] {
+  background: red;
+  opacity: 0.5;
+}
+.BookAddicon button[disabled]:hover {
+  cursor: not-allowed;
+}
+
+.BookAddicon button:hover:enabled {
   transform: scale(1.01);
-  opacity: 0.4;
+  opacity: 1;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
 }
 .bookCardContainer img {
