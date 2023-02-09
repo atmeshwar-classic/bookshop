@@ -1,8 +1,10 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { booksSliceReducer } from '../domain/books/booksSlice'
+import { cartSliceReducer } from '../domain/cart/cartSlice'
 
 const combinedReducer = combineReducers({
-  books: booksSliceReducer
+  books: booksSliceReducer,
+  cart: cartSliceReducer
 });
 
 export const store = configureStore({
