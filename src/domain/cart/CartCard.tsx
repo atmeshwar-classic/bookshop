@@ -3,8 +3,9 @@ import { CartItem } from "./types";
 import cross from "./../../assets/cross.svg";
 import book from "./../../assets/book1.jpg";
 import { AppDispatch } from "../../store/store";
-import {  useDispatch } from "react-redux";
-import { removeFromCart, cartSelector } from "../../domain/cart/cartSlice";
+import { useDispatch } from "react-redux";
+import { removeFromCart } from "../../domain/cart/cartSlice";
+import { toast } from "react-toastify";
 export const CartCard = (props: CartItem): JSX.Element => {
   const dispatch: AppDispatch = useDispatch();
   return (
@@ -26,10 +27,13 @@ export const CartCard = (props: CartItem): JSX.Element => {
         onClick={() => {
           // console.log("clicked");
           dispatch(removeFromCart(props.id));
-          // remove from cart  
+          toast.info(`${props.name} removed from cart `);
+          // remove from cart
         }}
       >
-        <img src={cross}></img>
+        <button>
+          <img src={cross}></img>
+        </button>
       </div>
     </div>
   );

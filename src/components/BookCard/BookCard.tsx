@@ -6,7 +6,7 @@ import { AppDispatch } from "../../store/store";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, cartSelector } from "../../domain/cart/cartSlice";
 import { CartItem, CartState } from "../../domain/cart/types";
-import { ToastContainer, toast } from "react-toastify";
+import {toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 /* 
 We would define the structure of the props in the same file as the component.
@@ -34,7 +34,7 @@ export const BookCard = (props: BookProps): JSX.Element => {
         // console.log("clicked");
         dispatch(addToCart({ ...props }));
         setToggleButton(!togglebutton);
-        toast.success("Added to cart");
+        toast.success(` ${props.name} Added to cart`);
       } else {
         toast.error("Already in cart", {
           closeOnClick: true,
@@ -67,7 +67,7 @@ export const BookCard = (props: BookProps): JSX.Element => {
             <i className="fa fa-plus" aria-hidden="true"></i>
           )}
         </button>
-        <ToastContainer closeOnClick theme="dark" />
+        
       </div>
     </div>
   );
