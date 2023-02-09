@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
     <React.StrictMode>
       <Provider store={store}>
-      <ToastContainer closeOnClick theme="dark" pauseOnFocusLoss={false} />
+      <ToastContainer closeOnClick theme="dark" pauseOnFocusLoss={false} autoClose={2000}/>
         <App />
       </Provider>
     </React.StrictMode>
