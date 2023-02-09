@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../store/store";
 import type { Book } from '../../domain/books/types'
 import { addToCart } from "../../domain/cart/cartSlice";
-// import "./BookCard.css";
+import "./BookCard.css";
 
 /* 
   We would define the structure of the props in the same file as the component.

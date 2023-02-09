@@ -8,7 +8,6 @@ const initialState: CartState = {
   loading: 'not loaded',
 };
 
-
 const cartSlice = createSlice({
   name: "cart",
   initialState,

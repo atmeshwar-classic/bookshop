@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { BookCard } from "../../components/BookCard";
 import { AppDispatch } from "../../store/store";
 import { booksSelector, getBooks } from "./booksSlice";
 import type { Book } from "./types";
-// import "./BooksPage.css";
+import { BookCard } from "../../components/BookCard";
+import "./BooksPage.css";
 
 export const BooksPage = (): JSX.Element => {
 
@@ -18,7 +18,7 @@ export const BooksPage = (): JSX.Element => {
 
   return (
     <div className="books-page-wrapper">
-      {loading == "loading" ? (
+      {loading === "loading" ? (
           <span className="book-loading">grabbing books</span>
         ) : (
           <div className="books-page-container">

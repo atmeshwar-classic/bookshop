@@ -3,14 +3,14 @@ import "./Nav.css";
 
 const Nav = () => {
   return (
-    <div className="nav">
-      <Link to="/" className="nav-link">
+    <nav className="navbar">
+      <Link to="/" className="navbar-link">
         books
       </Link>
-      <Link to="/cart" className="nav-link">
+      <Link to="/cart" className="navbar-link">
         cart
       </Link>
-    </div>
+    </nav>
   );
 };
 

@@ -1,5 +1,3 @@
 import { CartItem } from "../domain/cart/types";
 
-export const totalPrice = (cart: CartItem[]) => {
-  return cart.reduce((total, item) => (total += item.price), 0);
-};
+export const totalPrice = (cart: CartItem[]) => cart.reduce((total, item) => (total += item.price), 0);

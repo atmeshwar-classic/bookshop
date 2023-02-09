@@ -10,8 +10,8 @@ export const CartCard = ( { id, name, description, price }: CartProps): JSX.Elem
   return (
     <div className='cart-card-wrapper'>
       <div className="cart-card-info">
-        <p>{name}</p>
-        <p>{description}</p>
+        <p>{name.toLowerCase()}</p>
+        <p>{description.toLowerCase()}</p>
       </div>
       <div className="item-price">
         <p>₹{price}</p>
