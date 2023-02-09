@@ -1,6 +1,6 @@
-import { CartItem } from "../domain/cart/types";
+import { CartItem } from "./types";
 
-export const totalPrice = (cart: CartItem[]) => {
+export const priceTotal = (cart: CartItem[]) => {
   return cart.reduce(
     (accumulator, currentValue) => (accumulator += currentValue.price),
     0

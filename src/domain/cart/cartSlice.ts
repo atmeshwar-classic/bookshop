@@ -22,4 +22,4 @@ const cartSlice = createSlice({
 
 export const cartSliceReducer = cartSlice.reducer;
 export const { addBookToCart, removeBookFromCart } = cartSlice.actions;
-export const cartSelector = (state: RootState) => state.cart.cart;
+export const cartSelector = (state: RootState) => state.cart;
