@@ -1,41 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.books_main{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.books_sub{
+  width: 200px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.book_card_main div{
+border: 2px solid rgb(209, 207, 207);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.book_card_sub{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(223, 219, 219);
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book_card_sub_data{
+  padding: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header_main{
+  background-color:rgb(223, 219, 219);
+  padding: 20px;
+  margin-bottom: 10px;
 }
-
-.card {
-  padding: 2em;
+.header_main a{
+  margin-left: 10px;
 }
-
-.read-the-docs {
-  color: #888;
+.cart_card_main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  justify-content: space-evenly;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cart_card_sub{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(147, 148, 148);
+  margin-left: 5px;
+}
+.cart_card_no_sub{
+  width: 10px;
+  height: 50px;
+  background-color: white;
+  margin-left: 5px;
+}
+.cart_card_sub_data{
+  width: 70%;
+  height: 50px;
+  border-right: 2px solid rgb(172, 172, 172);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+.cart_card_sub_data div{
+  display: flex;
+  flex-direction: column;
+}
+.cart_main{
+  width: 55%;
+  height: 70vh;
+  background-color: rgb(204, 202, 202);
+  overflow-y: scroll;
+}
+.cart_items_main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

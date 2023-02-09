@@ -1,13 +1,21 @@
-import type { Book } from '../../domain/books/types'
-
-/* 
-  We would define the structure of the props in the same file as the component.
-  Since, this component has the same props as Type Book, we would assign it to it props.
-*/
+import type { Book } from "../../domain/books/types";
+import { GrAdd } from "react-icons/gr";
 type BookProps = Book;
 
 export const BookCard = (props: BookProps): JSX.Element => {
+  const { name, author, description, price,onClickPluse } = props;
   return (
-    <div>Book Card</div>
-  )
-}
+    <div className="book_card_main">
+      <div className="book_card_sub">
+        <h5>Book Image</h5>
+        <button onClick={()=>onClickPluse(props)}><GrAdd /></button>
+      </div>
+      <div className="book_card_sub_data">
+        <p>{name}</p>
+        <p>{author}</p>
+        <p>{description}</p>
+        <p>$ {price}</p>
+      </div>
+    </div>
+  );
+};

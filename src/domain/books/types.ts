@@ -6,6 +6,7 @@ export type Book = {
   author: string;
   description: string;
   price: number;
+  onClickPluse?:any
 }
 
 export type BooksState = DefaultLoadingState & {
