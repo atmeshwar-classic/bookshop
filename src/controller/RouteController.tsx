@@ -1,16 +1,14 @@
 
-import { BooksPage } from "../domain/books/BooksPage";
-import { CartPage } from "../domain/cart/CartPage";
-import Nav from "../components/Nav/Nav";
+import HeadMenu from "../components/headMenu";
 import { BrowserRouter as Router, Routes } from "react-router-dom";
 
 function RouteController(): React.ReactElement {
-  return <>
-    <Router>
+
+  return <Router>
     <Routes>
+
     </Routes>
-    < /Router>
-    < />;
+  </Router>;
 };
 
 export default RouteController;
