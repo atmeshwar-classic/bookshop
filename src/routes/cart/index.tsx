@@ -22,9 +22,13 @@ export const CartMain = (): JSX.Element => {
             />
           ))}
           <div className="cart-total">
-            <strong className="cart-total-price">
-              amount → ₹{totalCartPrice(cart)}
-            </strong>
+            <div className="cart-total-div">
+              <strong className="cart-total-price">
+                Total     ₹{totalCartPrice(cart)}
+              </strong>
+            </div>
+            <span className="empty-block"></span>
+
           </div>
         </div>
       )}
