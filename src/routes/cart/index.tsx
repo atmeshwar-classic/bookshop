@@ -3,7 +3,7 @@ import { CartItemComponent } from "../../components/cartItem";
 import { CartItem } from "../../types";
 import { totalCartPrice } from "../../utils/utils";
 import { cartSelector } from "./cart.reducer";
-import "./CartPage.css";
+import "./cart.styles.css";
 
 export const CartMain = (): JSX.Element => {
 

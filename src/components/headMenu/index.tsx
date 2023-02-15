@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "./headmenu.styles.css";
 
 const HeadMenu = () => {
-  return (
-    <nav className="head-menu">
+  return (<header className="head-menu">
+    <nav>
       <Link to="/" className="head-menu-anchor">
         Books
       </Link>
@@ -10,6 +11,7 @@ const HeadMenu = () => {
         Cart
       </Link>
     </nav>
+  </header>
   );
 };
 

@@ -1,0 +1,63 @@
+.book-item {
+  display: inline-block;
+  width: 180px;
+  border: 1px solid #000;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.book-item .book-image {
+  position: relative;
+  background-size: contain;
+}
+
+.book-item .cart-add-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+
+.book-item .cart-add-button:hover,
+.book-item .cart-add-button:focus {
+  background: #0053ba;
+}
+
+.book-item .cart-add-button:focus {
+  outline: none;
+  outline-offset: -4px;
+}
+
+.book-item .cart-add-button:active {
+  transform: scale(0.99);
+}
+
+.book-about {
+  padding-top: 16px;
+  padding: 12px;
+}
+
+.book-about .book-title {
+  text-transform: capitalize;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.book-about .book-author {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.book-about .book-desc {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.book-about .book-price {
+  font-size: 12px;
+  text-transform: capitalize;
+}

@@ -1,0 +1,23 @@
+.head-menu {
+  background: #efefef;
+  max-height: 60px;
+  min-width: 1200px;
+  display: block;
+  padding: 20px 60px;
+}
+
+.head-menu-anchor {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #032946;
+  letter-spacing: 0;
+  margin-right: 30px;
+}
+
+.head-menu-anchor:hover {
+  color: #0083da;
+}

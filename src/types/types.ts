@@ -11,6 +11,7 @@ export interface Book {
   bookAuthor: string;
   bookDescription: string;
   bookPrice: number;
+  bookImgUrl: string;
 }
 
 export type BooksState = DefaultLoadingState & {
@@ -24,6 +25,7 @@ export type CartItem = {
   bookAuthor: string;
   bookDescription: string;
   bookPrice: number;
+  bookImgUrl: string;
 }
 
 export type CartState = DefaultLoadingState & {

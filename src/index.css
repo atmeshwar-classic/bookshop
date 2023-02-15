@@ -13,6 +13,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  margin: auto;
 }
 
 a {
@@ -20,14 +21,33 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+p {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
 a:hover {
   color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex; */
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -48,9 +68,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -61,9 +83,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

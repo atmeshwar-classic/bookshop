@@ -4,7 +4,7 @@ import { BookItem } from "../../components/bookItem";
 import { AppDispatch } from "../../store/store";
 import { Book, BooksState } from "../../types";
 import { booksSelector, getBooks } from "./book.reducer";
-import "./BooksPage.css";
+import "./book.styles.css";
 
 export const BooksMain = (): JSX.Element => {
 
@@ -19,7 +19,7 @@ export const BooksMain = (): JSX.Element => {
   return (
     <div className="books-page-wrapper">
       {loading === "loading" ? (
-        <span className="book-loading">grabbing books</span>
+        <span className="book-loading">loading ...</span>
       ) : (
         <div className="books-page-container">
           {books.map((book: Book) => (

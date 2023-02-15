@@ -1,0 +1,16 @@
+.cart-wrapper {
+  margin: auto;
+  margin-top: 60px;
+  background-color: #efefef;
+  width: 1200px;
+  padding: 24px;
+}
+
+.cart-items-wrapper {}
+
+.cart-total {
+  background-color: #ffffff;
+  height: 60px;
+  width: 100%;
+  border-radius: 10px;
+}
