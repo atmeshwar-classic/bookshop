@@ -2,7 +2,7 @@
   margin: auto;
   margin-top: 60px;
   background-color: #efefef;
-  min-width: 1200px;
+  width: 1200px;
   padding: 24px;
 }
 
@@ -16,8 +16,8 @@
 .cart-total .cart-total-div {
   padding: 20px;
   border-right: 2px solid #cdcdcd;
+  margin-right: 93px;
   text-align: right;
-  margin-right: 94px;
 }
 
 .cart-total .cart-total-price {

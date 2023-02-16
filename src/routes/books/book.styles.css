@@ -1,5 +1,7 @@
 .books-page-wrapper {
   margin: auto;
   margin-top: 40px;
-  min-width: 1200px;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
 }
