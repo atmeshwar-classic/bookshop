@@ -9,7 +9,7 @@ type CartProps = CartItem;
 export const CartItemComponent = ({ id, bookTitle, bookDescription, bookPrice, bookImgUrl }: CartProps): JSX.Element => {
   const dispatch: AppDispatch = useDispatch();
   return (
-    <div className='cart-item-wrapper'>
+    <div className="cart-item-wrapper">
       <div className="cart-item-information">
         <div className="cart-image-item">
           <img width={60} height={60} src={bookImgUrl} loading={"lazy"} alt="cartImage" />
