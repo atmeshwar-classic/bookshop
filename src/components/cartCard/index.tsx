@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../../routes/cart/cart.reducer";
+import { CartItem } from "../../routes/cart/cart.types";
 import type { AppDispatch } from "../../store/store";
-import { CartItem } from "../../types";
-import "./cartItem.styles.css";
+import "./cartCard.styles.css";
 
 type CartProps = CartItem;
 

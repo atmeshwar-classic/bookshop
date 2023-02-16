@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { CartItemComponent } from "../../components/cartCard";
 import Header from "../../components/header";
-import { CartItem } from "../../types";
-import { totalCartPrice } from "../../utils/utils";
 import { cartSelector } from "./cart.reducer";
 import "./cart.styles.css";
+import { CartItem } from "./cart.types";
+import { totalCartPrice } from "./cart.utils";
 
 export const CartMain = (): JSX.Element => {
 

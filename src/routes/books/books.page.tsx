@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { BookItem } from "../../components/bookCard";
 import Header from "../../components/header";
 import { AppDispatch } from "../../store/store";
-import { Book, BooksState } from "../../types";
 import { booksSelector, getBooks } from "./book.reducer";
 import "./book.styles.css";
+import { Book } from "./books.types";
 
 export const BooksMain = (): JSX.Element => {
 
@@ -13,7 +13,6 @@ export const BooksMain = (): JSX.Element => {
   const { books, loading } = useSelector(booksSelector);
 
   useEffect(() => {
-    // fetch latest books
     dispatch(getBooks());
   }, []);
 

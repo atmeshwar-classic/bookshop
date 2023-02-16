@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
+import { Book } from "../../routes/books/books.types";
 import { addToCart } from "../../routes/cart/cart.reducer";
 import type { AppDispatch } from "../../store/store";
-import { Book } from "../../types";
-import "./bookItem.styles.css";
+import "./bookCard.styles.css";
 
 export const BookItem = (book: Book): JSX.Element => {
 
