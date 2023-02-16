@@ -4,9 +4,10 @@ import { addToCart } from "../../routes/cart/cart.reducer";
 import type { AppDispatch } from "../../store/store";
 import "./bookCard.styles.css";
 
-export const BookItem = ({ bookTitle, bookAuthor, bookDescription, bookPrice, bookImgUrl }: Book): JSX.Element => {
+export const BookItem = ({ bookTitle, bookAuthor, bookDescription, bookPrice, bookImgUrl, ...rest }: Book): JSX.Element => {
 
   const dispatch: AppDispatch = useDispatch();
+  const book: Book = { bookTitle, bookAuthor, bookDescription, bookPrice, bookImgUrl, ...rest };
 
   return (
     <div className="book-item">
