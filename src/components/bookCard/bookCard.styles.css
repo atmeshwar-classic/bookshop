@@ -41,23 +41,15 @@
   padding: 12px;
 }
 
-.book-about .book-title {
-  text-transform: capitalize;
-  font-size: 12px;
-  margin-bottom: 8px;
-}
-
-.book-about .book-author {
-  font-size: 12px;
-  text-transform: capitalize;
-}
-
-.book-about .book-desc {
-  font-size: 12px;
-  text-transform: capitalize;
-}
-
+.book-about .book-title,
+.book-about .book-author,
+.book-about .book-desc,
 .book-about .book-price {
-  font-size: 12px;
   text-transform: capitalize;
+  font-size: 12px;
+}
+
+.book-about .book-title {
+
+  margin-bottom: 8px;
 }
