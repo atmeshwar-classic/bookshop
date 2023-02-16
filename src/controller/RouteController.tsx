@@ -7,7 +7,6 @@ import { CartMain } from "../routes/cart";
 function RouteController(): React.ReactElement {
 
   return <Router>
-    <HeadMenu />
     <Routes>
       <Route path="/" element={<BooksMain />} />
       <Route path="/cart" element={<CartMain />} />

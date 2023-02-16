@@ -4,13 +4,13 @@
   padding: 12px;
   min-height: 30px;
   margin-bottom: 20px;
+  position: relative;
+  display: flex;
 }
 
 .cart-item-wrapper .cart-item-information {
-  border-right: 2px solid #cdcdcd;
   position: relative;
-  width: 93%;
-  display: inline-block;
+  display: flex;
   margin-right: 20px;
   vertical-align: middle;
 }
@@ -27,24 +27,45 @@
   display: inline-block;
   vertical-align: middle;
   text-transform: capitalize;
-  width: 70%;
   margin-right: 12px;
+}
+
+.cart-item-wrapper .cart-item-info .cart-item-title {
+  display: flex;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  font-weight: 700;
+}
+
+.cart-item-wrapper .cart-item-info .cart-item-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+}
+
+.cart-item-wrapper .cart-price-block {
+  display: inline-block;
+  place-items: center;
+  text-align: center;
+  position: absolute;
+  right: 16px;
+  top: 10px;
 }
 
 .cart-item-wrapper .cart-remove {
   display: inline-block;
-  place-items: center;
-  text-align: center;
+  padding-left: 20px;
+  border-left: 2px solid #cdcdcd;
 }
 
 .cart-item-wrapper .cart-remove .cart-remove-button {
-  margin: auto;
+  margin: 10px;
 }
 
-.cart-item-wrapper .item-price {
-  position: absolute;
-  right: 30px;
-  top: 15px;
+.cart-item-wrapper .cart-item-price {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
+  margin-right: 20px;
 }

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BookItem } from "../../components/bookItem";
+import HeadMenu from "../../components/headMenu";
 import { AppDispatch } from "../../store/store";
 import { Book, BooksState } from "../../types";
 import { booksSelector, getBooks } from "./book.reducer";
@@ -17,20 +18,23 @@ export const BooksMain = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="books-page-wrapper">
-      {loading === "loading" ? (
-        <span className="book-loading">loading ...</span>
-      ) : (
-        <div className="books-page-container">
-          {books.map((book: Book) => (
-            <BookItem
-              {...book}
-              key={book.id}
-            />
-          ))}
-        </div>
-      )
-      }
-    </div>
+    <>
+      <HeadMenu />
+      <div className="books-page-wrapper">
+        {loading === "loading" ? (
+          <span className="book-loading">loading ...</span>
+        ) : (
+          <div className="books-page-container">
+            {books.map((book: Book) => (
+              <BookItem
+                {...book}
+                key={book.id}
+              />
+            ))}
+          </div>
+        )
+        }
+      </div>
+    </>
   );
 };

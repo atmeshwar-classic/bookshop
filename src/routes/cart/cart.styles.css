@@ -6,8 +6,6 @@
   padding: 24px;
 }
 
-.cart-items-wrapper {}
-
 .cart-total {
   background-color: #ffffff;
   border-radius: 10px;
@@ -18,12 +16,11 @@
 .cart-total .cart-total-div {
   padding: 20px;
   border-right: 2px solid #cdcdcd;
-  width: 90%;
   text-align: right;
+  margin-right: 94px;
 }
 
 .cart-total .cart-total-price {
   text-align: right;
-  width: 720px;
-  margin-right: 20px;
+  margin-right: 0px;
 }

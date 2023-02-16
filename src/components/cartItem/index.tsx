@@ -15,15 +15,17 @@ export const CartItemComponent = ({ id, bookTitle, bookDescription, bookPrice, b
           <img width={60} height={60} src={bookImgUrl} loading={"lazy"} alt="cartImage" />
         </div>
         <div className="cart-item-info">
-          <strong>{bookTitle.toLowerCase()}</strong>
-          <p>{bookDescription.toLowerCase()}</p>
-        </div>
-        <div className="item-price">
-          <strong>₹{bookPrice}</strong>
+          <p className="cart-item-title">{bookTitle.toLowerCase()}</p>
+          <p className="cart-item-desc">{bookDescription.toLowerCase()}</p>
         </div>
       </div>
-      <div className="cart-remove" onClick={() => { dispatch(removeFromCart(id)) }}>
-        <button className='cart-remove-button' type="button">X</button>
+      <div className="cart-price-block">
+        <div className="cart-item-price">
+          <strong>₹{bookPrice}</strong>
+        </div>
+        <div className="cart-remove" onClick={() => { dispatch(removeFromCart(id)) }}>
+          <button className='cart-remove-button' type="button">X</button>
+        </div>
       </div>
     </div>
   );
