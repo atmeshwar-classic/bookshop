@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./headmenu.styles.css";
+import "./header.styles.css";
 
-const HeadMenu = () => {
+const Header = () => {
   return (<header className="head-menu">
     <nav>
       <Link to="/" className="head-menu-anchor">
@@ -15,4 +15,4 @@ const HeadMenu = () => {
   );
 };
 
-export default HeadMenu;
+export default Header;
