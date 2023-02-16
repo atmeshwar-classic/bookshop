@@ -16,7 +16,6 @@
 }
 
 .cart-item-wrapper .cart-image-item {
-  display: inline-block;
   width: 60px;
   height: 60px;
   margin-right: 12px;
@@ -24,7 +23,6 @@
 }
 
 .cart-item-wrapper .cart-item-info {
-  display: inline-block;
   vertical-align: middle;
   text-transform: capitalize;
   margin-right: 12px;
