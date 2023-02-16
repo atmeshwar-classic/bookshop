@@ -2,7 +2,7 @@
   margin: auto;
   margin-top: 60px;
   background-color: #efefef;
-  width: 1200px;
+  min-width: 1200px;
   padding: 24px;
 }
 
