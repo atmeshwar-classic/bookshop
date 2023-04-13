@@ -1,5 +1,6 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import type { RootState } from '../../store/store';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import {TypedUseSelectorHook,useDispatch, useSelector} from 'react-redux';
+import { RootState,AppDispatch } from '../../store/store';
 import { delay } from '../../utils/delay';
 import { books } from './books';
 import { Book, BooksState } from './types'
@@ -56,3 +57,7 @@ const booksSlice = createSlice({
 export const booksSliceReducer = booksSlice.reducer;
 export const { cleanupBooks } = booksSlice.actions;
 export const booksSelector = (state: RootState) => state.books;
+
+
+export const useAppDispatch : ()=> AppDispatch   = useDispatch;
+export const useAppSelector : TypedUseSelectorHook<RootState>   = useSelector
