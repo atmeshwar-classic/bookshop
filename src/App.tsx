@@ -3,6 +3,7 @@ import "./App.css";
 import { getBooks } from "./domain/books/booksSlice";
 import { useAppDispatch } from "./store/store";
 import Router from "./router/Router";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <div className='main'>
+       <Navbar />
       <Router/>
     </div>
   );
