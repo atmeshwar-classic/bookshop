@@ -36,7 +36,7 @@ useEffect(() => {
 
   return (
     <div className="main">
-       <Navbar changeRoute={changeRoute}/>
+       <Navbar changeRoute={changeRoute} cartItems={cartItems}/>
       <hr></hr>
       {
         route === 1 ? <CartPage cartItems={cartItems} getCartTotalCurrency={getCartTotalCurrency}handleRemoveCartItem={handleRemoveCartItem} /> : <BooksPage books={books} loading={loading} handleAddToCart={handleAddToCart} />

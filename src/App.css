@@ -132,3 +132,19 @@ align-items: center;
 .remove:hover, .navbar ul li:hover{
 cursor: pointer;
 }
+.cart-badge{
+  position: absolute;
+  top: -4px;
+  right: -6px;
+    z-index: 1;
+    background: hotpink;
+    width: 18px;
+    height: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 500;
+    border: none;
+}
