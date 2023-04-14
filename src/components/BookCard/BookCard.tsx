@@ -4,9 +4,12 @@ import type { Book } from '../../domain/books/types'
   We would define the structure of the props in the same file as the component.
   Since, this component has the same props as Type Book, we would assign it to it props.
 */
-type BookProps = {book: Book};
+type BookProps = {
+  book: Book
+  handleAddToCart : (item:Book) => void
+}
 
-export const BookCard = ({book}: BookProps): JSX.Element => {
+export const BookCard = ({book,handleAddToCart}: BookProps): JSX.Element => {
   const { id, name, author, description, price } = book
   return (
     <div className='book-container' key={id}>
@@ -17,7 +20,7 @@ export const BookCard = ({book}: BookProps): JSX.Element => {
         <div className='desc'>{description}</div>
         <div className='price'>{`${price}$`}</div>
         <div className='action-btns'>
-          <button >Add to cart</button>
+          <button onClick={()=>handleAddToCart(book)} >Add to cart</button>
           <button disabled={true}>Wishlist</button>
         </div>
       </div>
