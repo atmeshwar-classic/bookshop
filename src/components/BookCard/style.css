@@ -1,0 +1,56 @@
+.book-container{
+  background: #fff;
+  width: auto;
+  border-radius: 0.6em;
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+
+.details{
+  padding: 4px 15px 15px 15px;
+}
+.image {
+  width: 100%;
+  object-fit: cover;
+  height: 100px;
+  background-color: lightgrey;
+}
+.action-btns{
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  font-weight: 700;
+  padding: 4px 0px;
+  font-size: 1.2em;
+}
+.author, .price{
+  font-weight: 600;
+  font-size: 1em;
+  padding: 4px 0px;
+}
+.desc{
+  font-weight: 500;
+  font-size: 13px;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #ff3f6c;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  font-size: 13px;
+  width: 100px;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+button:disabled{
+  cursor: not-allowed;
+  opacity: 0.85;
+}

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import type { RootState } from '../../store/store';
+import { RootState, useAppSelector } from '../../store/store';
 import { CartState } from './types';
 
 const initialState: CartState = {

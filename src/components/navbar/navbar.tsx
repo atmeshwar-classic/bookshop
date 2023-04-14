@@ -1,23 +1,22 @@
 import React from 'react'
+import './style.css'
 import { CartState } from '../../domain/cart/types'
+import { Link } from 'react-router-dom'
+type NavbarProps = CartState 
 
-type NavbarProps = CartState & {
-  changeRoute: (c:number)=> void
-}
-
-const Navbar = ({changeRoute, cartItems}:NavbarProps) => {
+const Navbar = ({cartItems }: NavbarProps) => {
   return (
     <section className='navbar'>
-        <ul>
-          <li onClick={() => changeRoute(0)}>
-            Home
-          </li>
-          <li onClick={() => changeRoute(1)}>
-            Cart
-            <span className='cart-badge'>{cartItems.length}</span>
-            </li>
-        </ul>
-      </section>
+      <ul>
+        <li>
+          <Link to={'/home'} >Home</Link>
+        </li>
+        <li>
+          <Link to={'/cart'} >Cart</Link>
+          <span className='cart-badge'>{cartItems.length}</span>
+        </li>
+      </ul>
+    </section>
   )
 }
 

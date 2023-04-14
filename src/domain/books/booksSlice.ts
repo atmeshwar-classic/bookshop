@@ -2,13 +2,13 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import {TypedUseSelectorHook,useDispatch, useSelector} from 'react-redux';
 import { RootState,AppDispatch } from '../../store/store';
 import { delay } from '../../utils/delay';
-import { books } from './books';
+import { booksJson } from './books';
 import { Book, BooksState } from './types'
 
 export const getBooks = createAsyncThunk<Book[]>('books/get', async () => {
   // simulating a delay
   await delay(3000);
-  return books;
+  return booksJson;
 })
 
 // The code below is how a real world async thunk would look like
@@ -57,7 +57,3 @@ const booksSlice = createSlice({
 export const booksSliceReducer = booksSlice.reducer;
 export const { cleanupBooks } = booksSlice.actions;
 export const booksSelector = (state: RootState) => state.books;
-
-
-export const useAppDispatch : ()=> AppDispatch   = useDispatch;
-export const useAppSelector : TypedUseSelectorHook<RootState>   = useSelector

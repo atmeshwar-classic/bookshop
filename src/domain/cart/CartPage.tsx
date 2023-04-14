@@ -1,21 +1,30 @@
-
+import './style.css'
+import { useAppDispatch } from "../../store/store";
+import { removeFromCart } from "./cartSlice";
 import { CartItem, CartState } from "./types"
 
-type CartProps = CartState & {
-  handleRemoveCartItem: (item: CartItem) => void
-  getCartTotalCurrency:(cartItems:CartState)=>number
-}
+type CartProps = CartState
 
 
 
-export const CartPage = ({cartItems,handleRemoveCartItem,getCartTotalCurrency}:CartProps): JSX.Element => {
+export const CartPage = ({cartItems}:CartProps): JSX.Element => {
+  const dispatch = useAppDispatch();
+
+  const handleRemoveCartItem = (item: CartItem): void => {
+    dispatch(removeFromCart(item));
+  };
+  const getCartTotalCurrency = ({ cartItems }: CartState): number => {
+    let total: number = 0;
+    cartItems.forEach((item: CartItem) => (total += item?.price));
+    return total;
+  };
   return (
     <div className="cart-main">
       <div className="cart-wrapper">
         <h3 style={{textAlign:"center"}}>Checkout</h3>
         <div className="cart-scroll">
       {
-        cartItems && cartItems.map((item,index) => {
+          cartItems.map((item,index) => {
           return (<div key={index} className="cart-container">
             <div className="cart-img"></div>
             <div>

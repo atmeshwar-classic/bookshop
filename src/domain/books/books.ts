@@ -1,6 +1,6 @@
 import { Book } from "./types";
 
-export const books: Book[] = [
+export const booksJson: Book[] = [
   {
     id: '123',
     name: 'Book',
