@@ -1,14 +1,12 @@
-import './style.css'
-import { useAppDispatch } from "../../store/store";
+import './CartPageStyles.css'
+import { useAppDispatch, useAppSelector } from "../../store/store";
 import { removeFromCart } from "./cartSlice";
 import { CartItem, CartState } from "./types"
 
-type CartProps = CartState
-
-
-
-export const CartPage = ({cartItems}:CartProps): JSX.Element => {
+export const CartPage = (): JSX.Element => {
   const dispatch = useAppDispatch();
+  const { cartItems } = useAppSelector((state) => state.cart);
+
 
   const handleRemoveCartItem = (item: CartItem): void => {
     dispatch(removeFromCart(item));

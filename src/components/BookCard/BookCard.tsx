@@ -1,5 +1,5 @@
 import type { Book } from '../../domain/books/types'
-import './style.css'
+import './BookCardStyles.css'
 /* 
   We would define the structure of the props in the same file as the component.
   Since, this component has the same props as Type Book, we would assign it to it props.

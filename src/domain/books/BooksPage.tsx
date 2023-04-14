@@ -1,14 +1,13 @@
-import './style.css'
+import './BooksPageStyles.css'
 import { BookCard } from "../../components/BookCard"
-import { useAppDispatch } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "../../store/store";
 import { addToCart } from "../cart/cartSlice";
-import { Book, BooksState } from "./types"
-
-type BookPageProps = BooksState
+import { Book } from "./types"
 
 
-export const BooksPage = ({loading,books}:BookPageProps): JSX.Element => {
+export const BooksPage = (): JSX.Element => {
   const dispatch = useAppDispatch();
+  const { books, loading } = useAppSelector((state) => state.books);
 
   const handleAddToCart = (item: Book): void => {
     dispatch(addToCart(item));
@@ -18,7 +17,7 @@ export const BooksPage = ({loading,books}:BookPageProps): JSX.Element => {
     <div className="container">
       {loading==="loading" && <h3>Loading</h3>}
       {
-       loading==="loaded" && books.map((book):JSX.Element=> 
+       loading==="loaded" && books.map((book):JSX.Element=>
           <BookCard book={book} handleAddToCart={handleAddToCart} />
         )
       }

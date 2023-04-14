@@ -1,10 +1,11 @@
-import React from 'react'
-import './style.css'
-import { CartState } from '../../domain/cart/types'
+import './NavbarStyles.css'
 import { Link } from 'react-router-dom'
-type NavbarProps = CartState 
+import { useAppSelector } from '../../store/store'
 
-const Navbar = ({cartItems }: NavbarProps) => {
+
+const Navbar = () => {
+  const { cartItems } = useAppSelector((state) => state.cart);
+
   return (
     <section className='navbar'>
       <ul>
