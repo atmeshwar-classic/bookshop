@@ -9,7 +9,7 @@ type BookPageProps = BooksState & {
 export const BooksPage = ({loading,books,handleAddToCart}:BookPageProps): JSX.Element => {
   return (
     <div className="container">
-      {loading==="loading" && <h1>Loading</h1>}
+      {loading==="loading" && <h3>Loading</h3>}
       {
         books.map((book):JSX.Element=> 
           <BookCard  book={book} handleAddToCart={handleAddToCart} />

@@ -11,6 +11,7 @@ function App() {
   const [route, setRoute] = useState<number>(0)
   const dispatch = useAppDispatch()
   const { books,loading } = useAppSelector(state => state.books)
+  const { cartItems } = useAppSelector(state => state.cart)
 
 useEffect(() => {
   dispatch(getBooks())
@@ -29,7 +30,7 @@ useEffect(() => {
        <Navbar changeRoute={changeRoute}/>
       <hr></hr>
       {
-        route === 1 ? <CartPage  /> : <BooksPage books={books} loading={loading} handleAddToCart={handleAddToCart} />
+        route === 1 ? <CartPage cartItems={cartItems} /> : <BooksPage books={books} loading={loading} handleAddToCart={handleAddToCart} />
       }
     </div>
   )
