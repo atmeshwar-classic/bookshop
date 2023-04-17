@@ -36,6 +36,7 @@ export const CartPage = (): JSX.Element => {
                 </div>
               </div>
             </div>
+            
           </div>
         </div>)
 
