@@ -39,3 +39,154 @@
 .read-the-docs {
   color: #888;
 }
+
+div.book-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-inputs {
+  height: 100%;
+  padding: 0px 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(60, 74, 123, 0.1);
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.book-cart-switch {
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+}
+
+.book-cart-switchbtn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.book-cart-act-box {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 60%;
+  height: 50px;
+  
+}
+
+.book-cart-switchbtn button {
+  outline: none;
+}
+
+.book-switch {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: inline-block;
+  color: #AEB2C0;
+  /* padding: 4px 5px; */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.book-cart-switch .book-switch,
+.book-cart-switch .cart-switch,
+.car-hire-button-mobile {
+  display: inline-block;
+  color: #AEB2C0;
+  /* padding: 4px 5px; */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.book-box {
+  margin: 10px 10px;
+}
+
+.book-inner-data-container{
+  flex-direction: column;
+}
+.book-inner-box-one {
+  align-items: center;
+  justify-content: space-around;
+  width: 260px;
+  height: 37px;
+  display: flex;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  min-height: 60px;
+  height: 100%;
+}
+
+.inner-div {
+  display: flex;
+  height: 100%;
+  width: 77%;
+  gap: 10px;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.book-inner-data-heading p{
+  margin: 0;
+  font-size: 16px;
+  width: 100%;
+}
+.book-inner-data-heading p:nth-child(2){
+  font-size: 15px;
+  color: #aeb2c0
+}
+.book-inner-data-heading span:nth-child(2){
+  font-size: 15px;
+}
+.iti-menu-container {
+  width: 156px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  text-align: center;
+  z-index: 1;
+  background: #FFFFFF;
+border-radius: 6px;
+box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.07);
+padding: 5px 0px;
+box-sizing: border-box;
+}
+
+.iti-list-menu-container{
+  position: relative;
+}
+.iti-list-menu-container:hover{
+cursor: pointer;
+}
+
+.iti-time{
+  font-size: 14px;
+ color: #aeb2c0
+}
+.book-heading{
+  display: flex;
+}
+
+.cart-heading{
+  margin-left: 30px;
+}
+.total-cart{
+  margin-left: 52px
+}
