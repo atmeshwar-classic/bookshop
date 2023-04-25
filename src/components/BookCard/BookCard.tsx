@@ -28,7 +28,7 @@ export const BookCard = (): JSX.Element => {
             <button  className="btn">Books</button>
           </Link>
           <Link to="/cart">
-            <button className="btn">Cart</button>
+            <button className="btn">Cart</button>  
           </Link>
         </nav>
       </header>
@@ -37,7 +37,7 @@ export const BookCard = (): JSX.Element => {
           path="/books"
           element={<BooksPage handleClick={handleClick} />}
         />
-        <Route path="/cart" element={<CartPage books={bookData} />} />
+        <Route path="/cart" element={<CartPage books={bookData} />} />  
       </Routes>
     </Router>
   );
