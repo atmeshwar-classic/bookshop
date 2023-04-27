@@ -1,34 +1,21 @@
-import { useEffect, useState } from "react";
-import { CartItem } from "./types";
-import { Book } from "../books/types";
+import "./CartPage.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getBook, removeBook } from "./cartSlice";
+import { createSelector } from "@reduxjs/toolkit";
 
-interface BookPageProps {
-  books: Book[];
-}
-export const CartPage = ({ books }: BookPageProps): JSX.Element => {
-  const [cartData, setCartData] = useState<CartItem[]>(books);
-  const [totalPrice, setTotalPrice] = useState<number>(0);
+export const CartPage = (): JSX.Element => {
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    let TotalPrice = 0;
-    books.forEach((book) => {
-      TotalPrice += book.price;
-    });
-    setTotalPrice(TotalPrice);
-  }, [books]);
+  const cartData = useSelector(getBook);
 
-  const subtractCart = (id: string) => {
-    // console.log("clicked");
-    let updatedTotalPrice = totalPrice;
-    const filteredData = cartData.filter((cartData) => {
-      if (cartData.id === id) {
-        updatedTotalPrice -= cartData.price;
-        return false;
-      }
-      return true;
-    });
-    setCartData(filteredData);
-    setTotalPrice(updatedTotalPrice);
+  const getTotalPrice = createSelector([getBook], (books) => {
+    return books.reduce((total, book) => total + book.price, 0);
+  });
+
+  const totalPrice = useSelector(getTotalPrice);
+
+  const removeCart = (id: string) => {
+    dispatch(removeBook(id));
   };
 
   return (
@@ -54,7 +41,7 @@ export const CartPage = ({ books }: BookPageProps): JSX.Element => {
                   paddingRight: "1rem",
                   cursor: "pointer",
                 }}
-                onClick={() => subtractCart(book.id)}
+                onClick={() => removeCart(book.id)}
               >
                 X
               </p>

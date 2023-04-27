@@ -1,76 +1,7 @@
 
 
-.header {
-  width: 100%;
-  height: 100px;
-  background-color: teal;
-  text-align: center;
-  position:sticky
-}
-.btn {
-  padding: 5px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-family: cursive;
-  font-size: 25px;
-  cursor: pointer;
-  margin-top: 1.4rem;
-  position: relative;
-  overflow: hidden;
-}
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 20%;
-  margin: 0.5rem;
-}
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
-.container {
-  padding: 2px 16px;
-}
 
-.img{
-  display: flex;
-  background: lightgrey;
-  height: 8rem;
-}
 
-.bookPage{
-   display: flex;
-   justify-content: space-between;
-   
-}
-span{
-  font: 1.1em sans-serif;
-  cursor: pointer;
-  margin-left: auto;
-}
-section{
-  width: 60vw;
-  margin: 1rem 7rem 0 ;
-}
-.cart{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 2px solid grey;
-  border-radius: 10px;
-  margin-top: 0.5rem;
-}
-.description{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.price{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}

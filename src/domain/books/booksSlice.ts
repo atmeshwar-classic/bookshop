@@ -8,7 +8,7 @@ export const getBooks = createAsyncThunk<Book[]>('books/get', async () => {
   // simulating a delay
   await delay(3000);
   return books;
-})
+});
 
 // The code below is how a real world async thunk would look like
 
