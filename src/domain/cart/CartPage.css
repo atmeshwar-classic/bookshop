@@ -1,0 +1,29 @@
+
+span{
+    font: 1.1em sans-serif;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  section{
+    width: 60vw;
+    margin: 1rem 7rem 0 ;
+  }
+  .cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }
+  .description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
